@@ -2,18 +2,20 @@
 Active Directory home lab focused on users, groups, permissions, Group Policy, and troubleshooting.
 
 
-#Overview
-I built an Active Directory home lab using Windows Server 2016 and Windows 10 virtual machines. I configured the server as a domain controller to centrally manage users, computers, security groups, and organizational units for a simulated company. I created departmental file shares, assigned access using group-based permissions and least privilege, and used Group Policy to automatically map network drives for appropriate users. I also joined client machines to the domain, practiced remote administration using Windows Remote Desktop, configured password and account lockout policies, and troubleshot issues involving DNS, Group Policy, authentication, and shared-folder access.
+# Overview
+I built an Active Directory home lab using Windows Server 2016 and Windows 10 virtual machines. I configured the Windows Server as a domain controller to centrally manage users, computers, security groups, and organizational units for a simulated company. I created departmental file shares, assigned access using group-based permissions and least privilege, and used Group Policy to automatically map network drives for authorized users. I also joined Windows clients to the domain, practiced remote administration using Remote Desktop, configured password and account lockout policies, and troubleshot issues involving DNS, Group Policy, authentication, and shared-folder access.
 
 ## Initial Configuration
 
-To begin the lab, I created a virtualized Windows environment using Windows Server 2016 and Windows 10. The Windows Server VM was configured with a static IP address so it could reliably provide domain and DNS services to client machines.
+Before entering Windows, I came up with a mock company called Cascade Adventure Travel. I created the departments the company would need and the users who would be part of the organization.
 
-I installed the **Active Directory Domain Services (AD DS)** role on Windows Server 2016 and promoted the server to a **domain controller** for the `cat.com` domain. This established the server as the central system for managing users, computers, groups, authentication, and Group Policy within the lab environment.
+First, I created a virtualized Windows environment using Windows Server 2016 and Windows 10. I chose to configure the Windows Server VM with a static IP address so it could reliably provide domain and DNS services to client machines.
 
-Because Active Directory relies heavily on DNS, I configured the Windows 10 client to use the domain controller as its DNS server. I then joined the Windows 10 machine to the `cat.com` domain and verified that it could communicate with and authenticate against the domain controller.
+I installed the Active Directory Domain Services (AD DS) role on Windows Server 2016 and promoted the server to a domain controller for the cat.com domain. This established the server as the central system for managing users, computers, groups, authentication, and Group Policy within the lab environment.
 
-After the client was successfully joined to the domain, I tested the environment by logging in with a domain user account and using commands such as `whoami`, `nslookup`, and `ping` to verify domain authentication, DNS resolution, and network connectivity.
+Because Active Directory relies heavily on DNS, I configured the Windows 10 client to use the domain controller as its DNS server. I then joined the Windows 10 machine to the cat.com domain and verified that it could communicate with and authenticate against the domain controller.
+
+After the client was successfully joined to the domain, I tested the environment by logging in with a domain user account and using commands such as whoami, nslookup, and ping to verify domain authentication, DNS resolution, and network connectivity.
 
 #Run Inital commands to confirm connecivity
 
