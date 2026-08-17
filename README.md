@@ -1,7 +1,3 @@
-# active-directory-lab
-Active Directory home lab focused on users, groups, permissions, Group Policy, and troubleshooting.
-
-
 # Overview
 I built an Active Directory home lab using Windows Server 2016 and Windows 10 virtual machines. I configured the Windows Server as a domain controller to centrally manage users, computers, security groups, and organizational units for a simulated company. I created departmental file shares, assigned access using group-based permissions and least privilege, and used Group Policy to automatically map network drives for authorized users. I also joined Windows clients to the domain, practiced remote administration using Remote Desktop, configured password and account lockout policies, and troubleshot issues involving DNS, Group Policy, authentication, and shared-folder access.
 
@@ -28,7 +24,7 @@ Because Active Directory relies heavily on DNS, I configured the Windows 10 clie
 
 After the client was successfully joined to the domain, I tested the environment by logging in with a domain user account and using commands such as whoami, nslookup, and ping to verify domain authentication, DNS resolution, and network connectivity.
 
-![Terminal Commands Testing Connectivity](connectivity1.png)
+![Terminal Commands Testing Connectivity](connectivity_Commands1.png)
 
 This screenshot verifies that the Windows 10 client is logged in with the domain account cat\doug and authenticated by the SERVER2016 domain controller. It also confirms that DNS resolves Server2016 to the IP address 10.1.10.2 and that the client can successfully communicate with the server using ping. 
 
@@ -48,7 +44,7 @@ I organized the simulated company’s Active Directory environment using departm
 
 I also created departmental security groups such as `CAT-FIN`, `CAT-IT`, and `CAT-MAR` and added users to the appropriate groups based on their job role. These groups were later used to control access to departmental file shares, allowing permissions to be managed at the group level rather than individually for each user.
 
-![Active Directory organizational units and security groups](Configured_usersFolders_groups.png)
+![Active Directory organizational units and security groups](Configured_userFolders_groups.png)
 
 ## Department File Shares and Permissions
 
