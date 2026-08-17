@@ -24,7 +24,7 @@ Because Active Directory relies heavily on DNS, I configured the Windows 10 clie
 
 After the client was successfully joined to the domain, I tested the environment by logging in with a domain user account and using commands such as whoami, nslookup, and ping to verify domain authentication, DNS resolution, and network connectivity.
 
-![Terminal Commands Testing Connectivity](connectivity_Commands1.png)
+![Terminal Commands Testing Connectivity](connectivity_Commands_1.png)
 
 This screenshot verifies that the Windows 10 client is logged in with the domain account cat\doug and authenticated by the SERVER2016 domain controller. It also confirms that DNS resolves Server2016 to the IP address 10.1.10.2 and that the client can successfully communicate with the server using ping. 
 
